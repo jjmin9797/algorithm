@@ -9,6 +9,7 @@ def go(index, n, m):
     for i in range(1, n+1):
         if c[i]:
             continue
+        
         c[i] = True
         a[index] = i
         go(index+1, n, m)
