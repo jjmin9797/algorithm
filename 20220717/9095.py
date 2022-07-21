@@ -16,7 +16,8 @@ def go(index, a):
             return
         elif sum(result) >= a :
             return
-        print(result)
+        
         go(index+1,a)
+        
 
 go(0,aa)

@@ -5,7 +5,7 @@ for i in range(1,10001):
         count += int(j)
     result.append(count)
 result.sort()
-for i in range(1,101):
+for i in range(1,10001):
     if i in result :
         pass
     else :

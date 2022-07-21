@@ -9,12 +9,12 @@ for s in strings:
         if count == 0 and one == check :
             checkList.append(one)
             count += 1
-            print(one , ":","1번")
+
         elif count > 0 and one == check :
             count += 1
-            print(one , ":","2번")
+
         elif one != check :
-            print(one , ":","3번")
+
             if one in checkList:
                 result += 1
                 break
