@@ -1,9 +1,10 @@
 n,m = map(int,input().split())
-
+import copy
 board = [list(map(int,input().split())) for _ in range(m)]
 
 
-def check(inBoard) :
+def check(board) :
+    inBoard = copy.deepcopy(board)
     change = 1
     x = [1,0,-1,0]
     y = [0,1,0,-1]
@@ -24,10 +25,9 @@ selectIdx = [0,0,0]
 aaa = 0
 bbb = 0
 
-check(board)
-print(board)
 
-'''
+
+
 def go(index):
     global aaa
     global bbb
@@ -36,10 +36,9 @@ def go(index):
     global m
     global board
     if sum(selectIdx) == 3 :
-        print(board)
+
         if aaa < check(board):
             aaa = check(board)
-        bbb += 1
         return
     else :
         for i in range(n):
@@ -53,5 +52,3 @@ def go(index):
 
 go(0)
 print(aaa)
-print(bbb)
-'''
