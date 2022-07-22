@@ -1,7 +1,7 @@
 n,m = map(int,input().split())
 
 board = [list(map(int,input().split())) for _ in range(m)]
-
+inBoard = board
 
 def check(inBoard) :
     change = 1
@@ -16,6 +16,7 @@ def check(inBoard) :
                         if    inBoard[i][j] == 2 and 0 == inBoard[i+x[a]][j+y[a]] :
                             inBoard[i+x[a]][j+y[a]] = 2
                             change += 1
+        print(inBoard)
         result = 0
         for i in range(n):
             result += inBoard[i].count(0)

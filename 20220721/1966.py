@@ -14,8 +14,7 @@ for i in range(a):
         else :
             del q[0]
             if key[0] == m :
-                print(count)
+                print(count+1)
                 break
             del key[0]
             count += 1
-        print(count,":",q,key)

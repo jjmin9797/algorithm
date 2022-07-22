@@ -17,10 +17,11 @@ def check(board) :
                         if    inBoard[i][j] == 2 and 0 == inBoard[i+x[a]][j+y[a]] :
                             inBoard[i+x[a]][j+y[a]] = 2
                             change += 1
-        result = 0
-        for i in range(n):
-            result += inBoard[i].count(0)
-        return result
+    result = 0
+    for i in range(n):
+        result += inBoard[i].count(0)
+
+    return result
 selectIdx = [0,0,0]
 aaa = 0
 bbb = 0
@@ -36,9 +37,11 @@ def go(index):
     global m
     global board
     if sum(selectIdx) == 3 :
-
-        if aaa < check(board):
-            aaa = check(board)
+        checkBoard  = check(board)
+        
+        
+        if aaa < checkBoard:
+            aaa = checkBoard
         return
     else :
         for i in range(n):

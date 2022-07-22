@@ -3,4 +3,11 @@ des="87654321"
 
 
 a = "".join(input().split())
-print(a)
+
+
+if asc == a :
+    print("ascending")
+elif des == a :
+    print("descending")
+else :
+    print("mixed")
