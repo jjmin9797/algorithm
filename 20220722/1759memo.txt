@@ -1,5 +1,7 @@
-b c d f g h j k l m n p q r s t v w x y z
+maxVal = 19
 
-
-4 6
-a t c i s w
+17
+18
+19
+18
+17
