@@ -10,16 +10,10 @@ for i in range(n):
             a.append(0)
         a.append(1)
         board.append(a)
-
-
-
 k = int(input())
-
 for i in range(k):
     x,y = map(int,input().split())
     board[x][y] = 2
-
-
 
 def next(inNextX,inNextY,where) :
     if inNextX == 0 and inNextY == 1 :
@@ -27,7 +21,7 @@ def next(inNextX,inNextY,where) :
             return -1,0
         elif where == 'D':
             return 1,0
-    
+
     elif inNextX == 0 and inNextY == -1 :
         if where == 'L' :
             return 1,0
@@ -51,12 +45,7 @@ nextX = 0
 nextY = 1
 l = int(input())
 dummy=[[1,1]]
-
 switchBoard = [input().split() for _ in range(l)]
-
-
-
-
 
 for j in range(1,10000) :
     for ss in switchBoard :
@@ -64,7 +53,6 @@ for j in range(1,10000) :
             nextX,nextY = next(nextX,nextY,ss[1])
             break
 
-    #머리
     checkPointX = dummy[0][0]+nextX
     checkPointY = dummy[0][1]+nextY
     if board[checkPointX][checkPointY] == 1 :
@@ -85,13 +73,4 @@ for j in range(1,10000) :
             dummy[ww+1] = dummy[ww]
         dummy[0] = [dummy[0][0]+nextX,dummy[0][1]+nextY]
         time += 1
-    
-
- 
-
-
-        
-
-
-
 print(time+1)

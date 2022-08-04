@@ -35,7 +35,7 @@ while check :
             r = r+(nextX[nextW]*-1)
             c = c+(nextY[nextW]*-1)
 
-print(board)
+
 ccc = 0
 for b in board :
     ccc+=b.count(2)
