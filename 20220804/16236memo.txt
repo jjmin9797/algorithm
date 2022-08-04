@@ -1,0 +1,15 @@
+4 3 2 1
+0 0 0 0
+0 0 9 1
+1 2 3 4
+
+
+2,2
+
+q = [2,2,0]
+distList = []
+visited = 
+F F F F
+F F F F
+F F T F
+F F F F
