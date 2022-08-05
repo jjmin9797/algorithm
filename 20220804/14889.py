@@ -41,3 +41,7 @@ def go(idx,na) :
             del choo[-1]
 go(0,n)
 print(minVal)    
+
+
+
+#일반적인 브루트포스로는 풀 수 없음.

@@ -19,6 +19,8 @@ def checkNext(inBoard,a,inSize) :
 
 while True :
     nextEat,sharkWhere = checkNext(board,n,size)
+    
+
     break
     
             
