@@ -1,13 +1,9 @@
-n = int(input())
-
-board = [list(map(int,input().split())) for _ in range(n)]
-
 def next_permutation(a):
     i = len(a)-1
     while i > 0 and a[i-1] >= a[i]:
         i -= 1
     if i <= 0:
-        return False,a
+        return False
     j = len(a)-1
     while a[j] <= a[i-1]:
         j -= 1
@@ -20,32 +16,26 @@ def next_permutation(a):
         i += 1
         j -= 1
 
-    return True,a
+    return True
 
-def valueCheck(x) :
-    
-    val = 0
-    for i in range(len(x)-1) :
-        b = board[x[i]][x[i+1]]
-        if b == 0 :
-            return -1
-        else :
-            val += b
-    c = board[x[-1]][x[0]]
-    if c == 0 :
-        return -1
-    else :
-        val += c
-    
-    return val
-nums = [i for i in range(n)]
-minVal = valueCheck(nums)
-while True :
-    check,val = next_permutation(nums)
-    value = valueCheck(val)
-    
-    if value < minVal and value != -1:
-        minVal = value
-    if not check :
+n = int(input())
+w = [list(map(int,input().split())) for _ in range(n)]
+d = list(range(n))
+ans = 2147483647
+while True:
+    ok = True
+    s = 0
+    for i in range(0, n-1):
+        if w[d[i]][d[i+1]] == 0:
+            ok = False
+            break
+        else:
+            s += w[d[i]][d[i+1]]
+    if ok and w[d[-1]][d[0]] != 0:
+        s += w[d[-1]][d[0]]
+        ans = min(ans, s)
+    if not next_permutation(d):
         break
-print(minVal)
+    if d[0] != 0:
+        break
+print(ans)

@@ -29,7 +29,7 @@ else :
             str = ""
             for x in range(n):
                 if x % 2 == 1 :
-                    str += "* "
+                    str += "*"
                 else :
                     str += " "
             print(str)
