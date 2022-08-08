@@ -7,5 +7,5 @@ while len(nums) < 1001 :
         nums.append(count)
     count += 1
 a,b = map(int,input().split())
-print(nums[a-1:b])
+print(sum(nums[a-1:b]))
 #1 2 2 3 3 3 4 4 4 5 5 5 5 5 6 6 6 6 6 6 
