@@ -13,6 +13,6 @@ for i in range(2, n+1):
         if j+1 <= 9:
             d[i][j] += d[i-1][j+1]
         d[i][j] %= mod
-print(d)
+
 ans = sum(d[n]) % mod
 print(ans)

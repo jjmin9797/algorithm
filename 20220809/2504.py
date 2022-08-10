@@ -1,20 +1,41 @@
-a = list(input())
+bracket = list(input())
 
-def check(b) :
-    if b.count('(') == b.count(')') and b.count('[') == b.count(']'):
-        return True
-    else :
-        return False
+stack = []
+answer = 0
+tmp = 1
 
+for i in range(len(bracket)):
 
+    if bracket[i] == "(":
+        stack.append(bracket[i])
+        tmp *= 2
 
-        
-if check(a):
-    while ']'and'['and'('and')' in a :
-        
+    elif bracket[i] == "[":
+        stack.append(bracket[i])
+        tmp *= 3
 
-    
-else :
+    elif bracket[i] == ")":
+        if not stack or stack[-1] == "[":
+            answer = 0
+            break
+        if bracket[i-1] == "(":
+            answer += tmp
+        stack.pop()
+        tmp //= 2
+
+    else:
+        if not stack or stack[-1] == "(":
+            answer = 0
+            break
+        if bracket[i-1] == "[":
+            answer += tmp
+
+        stack.pop()
+        tmp //= 3
+
+if stack:
     print(0)
+else:
+    print(answer)
 
 
