@@ -5,12 +5,9 @@ for _ in range(n):
     board.append(list(map(int,input().split())))
 dp.append(board[-1])
 board.reverse()
-print(dp)
-print(board)
 for i in range(n-1):    
     bb = []
     for j in range(len(board[i])-1):
-        print(i,j)
         bb.append(board[i+1][j] + max(dp[i][j], dp[i][j+1]))
     dp.append(bb)
 print(dp[-1][0])
