@@ -9,19 +9,23 @@
 #2 8 12
 #8 19 18
 #20 37 24
-a = 6
-start = 2
-end = 8
-n = 13
-count = 2
-while True :
-    print(start,end)
-    if start <= n < end :
-        print(start,end,count)
-        break
-    else :
-        a += 6
-        start = end
-        end += a
-        count += 1
+n = int(input())
+if n == 1 :
+    print(1)
+else :
+    a = 6
+    start = 2
+    end = 8
+
+    count = 2
+    while True :
+
+        if start <= n < end :
+            print(count)
+            break
+        else :
+            a += 6
+            start = end
+            end += a
+            count += 1
         

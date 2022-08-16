@@ -14,8 +14,8 @@ for bb in range(n):
             else :
                 result.pop()
     if len(result) == 0 and check :
-        r.append("Yes")
+        r.append("YES")
     else :
-        r.append("No")
+        r.append("NO")
 for i in range(n):
     print(r[i])
