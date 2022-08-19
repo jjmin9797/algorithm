@@ -8,7 +8,7 @@ for i in range(n):
         continue
     if d[i] < d[i-1] + a[i]:
         d[i] = d[i-1] + a[i]
-print(d)
+
 for i in range(n-1, -1, -1):
     dr[i] = a[i]
     if i == n-1:
@@ -16,7 +16,7 @@ for i in range(n-1, -1, -1):
     if dr[i] < dr[i+1] + a[i]:
         dr[i] = dr[i+1] + a[i]
 ans = max(d)
-print(dr)
+
 for i in range(1, n-1):
     if ans < d[i-1] + dr[i+1]:
         ans = d[i-1] + dr[i+1]
