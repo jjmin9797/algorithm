@@ -1,10 +1,10 @@
 import collections
-
+import sys
 dq = collections.deque()
 
 n = int(input())
 for _ in range(n):
-    command = input().split()
+    command = sys.stdin.readline().split()
     if command[0] == 'push':
         dq.append(int(command[1]))
     elif command[0] == 'pop':

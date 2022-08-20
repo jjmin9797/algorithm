@@ -1,36 +1,25 @@
-
-while True :
-    a = input()
-    if a == "." :
+while True:
+    s = input()
+    if s == '.':
         break
-    board = []
-    check = True
-    for b in a :
-        print(board)
-        if b == "(" and b == "[" :
-            board.append(b)
-        elif b == ")" :
-            if len(board) != 0 and board[-1] == "(" :
-                del board[-1]
-                pass
-            else :
-                check = False
+    stk = []
+    temp = True
+    for i in s:
+        if i == '(' or i == '[':
+            stk.append(i)
+        elif i == ')':
+            if not stk or stk[-1] == '[':
+                temp = False
                 break
-
-        elif b == "]" :
-            if len(board) != 0 and board[-1] == "[" :
-                del board[-1]
-                pass
-            else :
-                check = False
+            elif stk[-1] == '(':
+                stk.pop()
+        elif i == ']':
+            if not stk or stk[-1] == '(':
+                temp = False
                 break
-        else :
-            pass
-
-    if check and len(board) == 0 :
-        print("yes")
-    else :
-        print("no")
-    
-    
-            
+            elif stk[-1] == '[':
+                stk.pop()
+    if temp == True and not stk:
+        print('yes')
+    else:
+        print('no')

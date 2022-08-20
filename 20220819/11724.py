@@ -1,4 +1,6 @@
 import sys
+
+sys.setrecursionlimit(100000)
 n,m = map(int,input().split())
 board = [[] for _ in range(n+1)]
 

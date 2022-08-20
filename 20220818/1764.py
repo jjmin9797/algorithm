@@ -1,16 +1,14 @@
-n,m = map(int,input().split())
-d = []
-b = []
-result = []
-for ss in range(n):
-    d.append(input())
-for ss in range(m):
-    bb = input()
-    if bb in d :
-        result.append(bb)
+N , M = map(int,input().split())
+arr_1 = set()
+arr_2 = set()
 
-result.sort()
-print(len(result))
-for r in result :
-    print(r)
+for _ in range(N):
+    arr_1.add(input())
+for _ in range(M):
+    arr_2.add(input())
 
+arr = sorted(list(arr_1 & arr_2))
+print(len(arr))
+
+for i in arr:
+    print(i)
