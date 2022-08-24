@@ -13,4 +13,4 @@ while d :
         if 0 <= na[i] <= 100001 and board[na[i]] == -1 :
             board[na[i]] = board[a]+1
             d.append(na[i])
-print(board[k-1])
+print(board[k])

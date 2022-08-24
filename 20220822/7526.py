@@ -1,26 +1,21 @@
-import collections
-import time
-def bfs(l,sx,sy,lx,ly):
-    nx = [-2,-1,1,2,2,1,-1,-2]
-    ny = [1,2,2,1,-1,-2,-2,-1]
-    board = [[0] * l for _ in range(l)]
-    d = collections.deque()
-    d.append((sx,sy))
-    check = True
-    while d :
-        sx,sy = d.popleft()
-        for i in range(8):
-            dx = sx+nx[i]
-            dy = sy+ny[i]
-            if 0<=dx<l and 0<=dy<l:
-                board[dx][dy] = board[sx][sy] + 1
-                if dx == lx and dy == ly :
-                    return board[dx][dy]
-                d.append((dx,dy))
-
-n = int(input())
-for _ in range(n):
-    l = int(input())
+from collections import deque
+dx = [-2,-1,1,2,2,1,-1,-2]
+dy = [1,2,2,1,-1,-2,-2,-1]
+t = int(input())
+for _ in range(t):
+    n = int(input())
     sx,sy = map(int,input().split())
-    lx,ly = map(int,input().split())
-    print(bfs(l,sx,sy,lx,ly))
+    ex,ey = map(int,input().split())
+    d = [[-1]*n for _ in range(n)]
+    q = deque()
+    q.append((sx,sy))
+    d[sx][sy] = 0
+    while q:
+        x,y = q.popleft()
+        for k in range(8):
+            nx,ny = x+dx[k], y+dy[k]
+            if 0 <= nx < n and 0 <= ny < n:
+                if d[nx][ny] == -1:
+                    d[nx][ny] = d[x][y] + 1
+                    q.append((nx,ny))
+    print(d[ex][ey])

@@ -22,6 +22,5 @@ def bfs(x,y):
                 board[dx][dy] = board[x][y] + 1
     return board[n-1][m-1]
 print(bfs(0,0))
-for b in board:
-    print(b)
+
 
