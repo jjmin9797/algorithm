@@ -1,23 +1,15 @@
 import sys
-import collections
+input = sys.stdin.readline
 
-n,m = map(int,input().split())
-board = [list(map(int,sys.stdin.readline().split())) for _ in range(n)]
-nx = [1,0]
-ny = [0,1]
-dp = [[-1 for _ in range(m)] for _ in range(n)]
-dp[0][0] = board[0][0]
-def bfs(x,y):
-    st = collections.deque()
-    st.append((x,y))
-    while st :
-        x,y = st.popleft()
-        for i in range(2):
-            a = x+nx[i]
-            b = y+ny[i]
-            if 0 <= a < n and 0 <= b < m :
-                dp[a][b] = max(dp[a][b] , dp[x][y] + board[a][b])
-                st.append((a,b))
-bfs(0,0)
-print(dp[n-1][m-1])
-print(dp)
+N, M = map(int, input().split())
+dp = [[0] * (M + 1)] * (N + 1)
+candy = []
+
+for i in range(N):
+    candy.append(list(map(int, input().split())))
+
+for i in range(1, N+1):
+    for j in range(1, M+1):
+        dp[i][j] = max(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]) + candy[i-1][j-1]
+
+print(dp[N][M])

@@ -9,12 +9,13 @@ line = []
 for b in board:
     line.append(b[1])
 print(line)
-dp = [1]
+dp = [1] * n
 for i in range(1,n):
-    maxa = 1
+
     for j in range(i):
         if line[j] < line[i] :
-            if maxa < dp[j]+1 :
-                maxa = dp[j]+1
-    dp.append(maxa)
-print(max(dp))
+        
+            dp[i] = max(dp[i], dp[j]+1)
+
+print(n-max(dp))
+

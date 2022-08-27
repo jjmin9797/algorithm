@@ -11,6 +11,7 @@ while d :
     na = [a+1,a-1,a*2]
     for i in range(3):
         if 0 <= na[i] <= 100001 and board[na[i]] == -1 :
+            
             board[na[i]] = board[a]+1
             d.append(na[i])
 print(board[k])
