@@ -13,9 +13,6 @@ sum_prime = [0] * (len(prime_list) + 1)
 for i in range(len(prime_list)):
     sum_prime[i+1] = sum_prime[i] + prime_list[i] 
 
-print(prime_list[0:10])
-print(sum_prime[0:10])
-print(len(sum_prime))
 
 #인풋
 N = int(input())
@@ -24,8 +21,7 @@ N = int(input())
 answer = 0
 start = 0
 end = 1
-print(prime_list[0:10])
-print(sum_prime[0:10])
+
 #알고리즘 실행
 while start < len(sum_prime) and prime_list[end-1] <= N:
     if sum_prime[end] - sum_prime[start] == N: #소수와 같을 경우

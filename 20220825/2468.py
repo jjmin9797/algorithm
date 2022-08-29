@@ -6,7 +6,7 @@ nx = [0,1,0,-1]
 ny = [1,0,-1,0]
 board = [list(map(int,sys.stdin.readline().split())) for _ in range(n)]
 result = [1]
-for i in range(1,101):
+for i in range(1,102):
     b = copy.deepcopy(board)
     st = collections.deque()
     ctn = 0

@@ -1,4 +1,6 @@
 import collections
+import sys
+sys.setrecursionlimit(10**9)
 n,m = map(int,input().split())
 
 board = [list(input()) for _ in range(n)]

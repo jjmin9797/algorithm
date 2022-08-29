@@ -11,7 +11,7 @@ for _ in range(t):
         a,b = map(int,sys.stdin.readline().split())
         board[b].append(a)
     end = int(input())
-    bfsList = [[0] for _ in range(10000)]
+    bfsList = [[0] for _ in range(50)]
     st = collections.deque()
     st.append((end,0))
     

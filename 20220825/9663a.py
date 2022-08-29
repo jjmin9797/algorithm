@@ -22,7 +22,7 @@ def dfs(x):
 N = int(input())
 row = [0] * N
 result = 0
-print(row)
+
 dfs(0)
 # print(row)
 print(result)
