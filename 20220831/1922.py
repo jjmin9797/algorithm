@@ -1,34 +1,28 @@
-import collections
 import sys
+input=sys.stdin.readline
 
+def find(x):
+   if x==parent[x]:
+      return x
+   parent[x]=find(parent[x])
+   return parent[x]
 
-n = int(input())
-m = int(input())
-board = [[] for _ in range(n+1)]
-check = [True for _ in range(n+1)]
-check[0] = False
-check[1] = False
-for _ in range(m):
-    a,b,c = map(int,sys.stdin.readline().split())
-    if a != b :
-        board[a].append([b,c])
-        board[b].append([a,c])
-minVal = 10**10
+def union(x,y):
+   x,y=find(x),find(y)
+   parent[x]=y
 
-def dfs(x,cost):
-
-    global minVal
-    if True not in check:
-        minVal = min(minVal,cost)
-        print(cost)
-        return
-    if cost >= minVal :
-        return
-
-    for i in board[x]:
-        if check[i[0]] :
-            check[i[0]] = False
-            dfs(i[0],cost+i[1])
-            check[i[0]] = True
-dfs(1,0)
-print(minVal)
+n=int(input())
+m=int(input())
+arr=[list(map(int,input().split())) for _ in range(m)]
+arr=sorted(arr,key=lambda k: k[2])
+parent =[i for i in range(0,n+2)]
+ans=0
+for a in arr:
+   start,end,weight=a
+   #cycle 확인
+   if find(start)==find(end):
+      continue
+   else:
+      ans+=weight
+      union(start,end)
+print(ans)
