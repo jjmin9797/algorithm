@@ -5,7 +5,7 @@ input = sys.stdin.readline
 n,m = map(int,input().strip().split())
 
 boarda = [list(map(int,input().strip().split())) for _ in range(n)]
-
+check = [[0]*m for _ in range(n)]
 nx = [0,1,0,-1]
 ny = [1,0,-1,0]
 
@@ -24,7 +24,7 @@ def go(board):
 
 def bfs(board):
     count = 0
-    bb = board
+    bb = copy.deepcopy(board)
     for i in range(n):
         for j in range(m):
             
@@ -46,6 +46,9 @@ def bfs(board):
 ccc = 0
 while bfs(boarda):
     boarda = go(boarda)
+    if boarda == check :
+        ccc = 0
+        break
     ccc += 1
 
 print(ccc)

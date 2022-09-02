@@ -12,13 +12,13 @@ for _ in range(e):
     graph[a].append((b, cost))
 
 
+
 def dijkstra(start):
     q = []
     distance = [INF] * (v + 1)
-
     heapq.heappush(q, (0, start))
     distance[start] = 0
-    print(q)
+    
     while q:
         dist, now = heapq.heappop(q)
 
@@ -31,7 +31,7 @@ def dijkstra(start):
             if distance[node_index] > cost:
                 distance[node_index] = cost
                 heapq.heappush(q, (cost, node_index))
-        print(q)
+
 
     return distance
 
@@ -39,9 +39,7 @@ def dijkstra(start):
 result = 0
 for i in range(1, v + 1):
     go = dijkstra(i)
-    print()
     back = dijkstra(x)
     result = max(result, go[x] + back[i])
-    print()
 
 print(result)

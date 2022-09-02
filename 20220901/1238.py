@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 n,m,x = map(int,input().split())
 graph = [[] for _ in range(n+1)]
 check = [True for _ in range(n+1)]
