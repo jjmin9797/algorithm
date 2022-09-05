@@ -21,7 +21,7 @@ for i in range(n):
     for j in range(m):
         if data[j] in [1, 2, 3, 4, 5]:
             cctv.append([data[j], i, j])
-print(cctv)
+
 def fill(board, mm, x, y):
     for i in mm:
         nx = x
