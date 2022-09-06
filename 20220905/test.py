@@ -1,7 +1,11 @@
-import collections
+a = 80
 
-a = collections.deque([1,2,3,4,5])
+fc = 7
+ba = 5
 
-a[-1] = 0
-print(a)
-
+if a < 90 :
+    ba = ba + 1
+a = a + 5
+if a < 90 :
+    ba = ba + 1
+a = a + 5

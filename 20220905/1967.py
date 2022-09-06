@@ -20,6 +20,8 @@ def dfs(start,w):
 dfs(1,0)
 start = check.index(max(check))
 check = [-1]*(n+1)
+check[start] = 0
+
 dfs(start,0)
 print(max(check))
         
