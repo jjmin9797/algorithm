@@ -2,7 +2,7 @@ n = int(input())
 nums = list(map(int,input().split()))
 giho = list(map(int,input().split()))
 minVal = 10**10
-maxVal = -1
+maxVal = -1*10**10
 def go(idx,ctn,ccc):
     global minVal
     global maxVal
