@@ -5,7 +5,7 @@ n = int(input())
 graph = [list(map(int,input().split())) for _ in range(n)]
 nx = [0,1,0,-1]
 ny = [1,0,-1,0]
-visited = [[0 for _ in range(n)] for _ in range(n)]
+
 
 
 def bfs(x,y,num):

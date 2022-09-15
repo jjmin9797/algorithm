@@ -20,10 +20,6 @@ def bfs():
     cnt = 0
     # 한번 while문 끝날 때마다 1시간 지난다.
     while q:
-        for v in graph :
-            print(v)
-        time.sleep(0.5)
-        print()
         x,y = q.popleft()
         for i in range(4):
             nx = x + dx[i]

@@ -15,6 +15,17 @@ while st :
     for x in range(n):
         if graph[next][x] == 1 and visited[x] == 0:
             visited[x] = 1
-            st.append(x)
+            st.append(x) 
             rs.append(x)
-print(rs)
+check = True
+for c in city :
+    if c-1 in rs :
+        pass
+    else :
+        check = False
+        break
+
+if check :
+    print("YES")
+else :
+    print("NO")
