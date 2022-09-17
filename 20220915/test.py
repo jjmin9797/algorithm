@@ -1,7 +1,5 @@
-import collections
-
-a = collections.deque([5,3,1,2])
-a = list(a)
-a.sort()
-a = collections.deque(a)
-print(a)
+def solution(n):
+    n = list(map(int,list(n)))
+    n.reverse()
+    return n
+solution(12345)

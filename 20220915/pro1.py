@@ -18,7 +18,7 @@ def solution(money):
         a = max(dp[i-4][1]+money[i-3]+money[i],max(dp[i-4])+money[i-2]+money[i])
         b = max(dp[i-1])
         dp[i] = [a,b]
-    print(dp)
+
     return max(dp[-1])
 
 money = [20,2,3,50]
