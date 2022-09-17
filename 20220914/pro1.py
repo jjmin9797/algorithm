@@ -5,7 +5,7 @@ def solution(n, works):
     works.sort(reverse=True)
 
     while n != 0 :
-        print(works)
+
         gigun = works[0]
         search = False
         for i in range(len(works)):

@@ -1,14 +1,15 @@
+import sys
 n = int(input())
-nums = list(map(int,input().split()))
-rs = []
+A = list(map(int, sys.stdin.readline().split()))
+answer = [-1] * n
+stack = []
 
-for i in range(n):
-    check=True
-    for j in nums[i+1:]:
-        if nums[i] < j:
-            rs.append(j)
-            check=False
-            break
-    if check :
-        rs.append(-1)
-print(rs)
+
+stack.append(0)
+for i in range(1, n):
+    while stack and A[stack[-1]] < A[i]:
+        answer[stack.pop()] = A[i]
+    stack.append(i)
+
+
+print(*answer)
