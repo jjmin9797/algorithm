@@ -3,12 +3,12 @@ import sys
 
 n = int(input())
 m = int(input())
-inf = 1000000
+inf = 100000000
 graph = [[] for _ in range(n+1)]
 visited = [inf for _ in range(n+1)]
 for _ in range(m):
     start,end,w = map(int,sys.stdin.readline().split())
-    graph[start].append((end,w))
+    graph[start].append([end,w])
 
 startCity,endCity = map(int,input().split())
 
