@@ -34,4 +34,3 @@ for c,a,b in graph :
         selected.append(c)
 answer -= selected.pop()
 print(answer)
-print(parent)

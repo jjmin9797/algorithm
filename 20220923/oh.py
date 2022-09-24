@@ -4,6 +4,7 @@ def solution(seat):
     #[1,1],[1,-1],[-1,1],[-1,-1]
     nextx = [[1,0],[2,0],[-1,0],[-2,0]]
     nexty = [[0,1],[0,2],[0,-1],[0,-2]]
+    next4 = []
     for i in range(length):
         for j in range(length):
             if seat[i][j] == "O":
@@ -21,7 +22,10 @@ def solution(seat):
                         ctn += 1
                 if result < ctn :
                     result = ctn
-    return result
+
+
+
+    return 1
 
 
 
