@@ -49,14 +49,6 @@ for _ in range(k):
             mainBoard[i][j] += board[i][j]
             while 0 in tree[i][j]:
                 tree[i][j].remove(0)
-
-
-    for aaa in mainBoard:
-        print(aaa)
     
-
-    for bbb in tree:
-        print(bbb)
-    
-    print(liveTree)
-    print()              
+print(liveTree)
+           
