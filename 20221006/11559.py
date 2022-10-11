@@ -58,6 +58,3 @@ while True :
         break
     result += 1
     board = boardMove(board)
-    for bbb in board:
-        print(bbb)
-    print()
