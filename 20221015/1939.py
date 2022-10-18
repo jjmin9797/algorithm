@@ -11,9 +11,6 @@ for i in range(1,n+1):
     graph[i].sort(reverse=True)
 
 distance = [0] * (n + 1)
-
-
-    
 start,end = map(int,input().split())
 q = []
 heapq.heappush(q,[0,start])
