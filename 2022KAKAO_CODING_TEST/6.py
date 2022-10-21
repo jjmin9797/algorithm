@@ -32,8 +32,12 @@ def solution(n, m, x, y, r, c, k):
         return "impossible"
     elif check == 0 :
         return road
-    else :
+    elif x+1 <= n :
         return ("du"*(check//2))+road
+    else :
+        
+
+        '''
         if "u" in road and ("r" in road or "u" in road) and x+1 <= n:
             return ("du"*(check//2))+road
         elif "u" in road and ("r" in road or "u" in road) and x+1 > n :
@@ -51,7 +55,7 @@ def solution(n, m, x, y, r, c, k):
         elif "d" in road and "l" in road:
             return road + ("rl"*(check//2))
         
-        
+        '''
 
                     
     return answer
