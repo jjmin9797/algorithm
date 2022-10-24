@@ -8,7 +8,7 @@ if __name__ == '__main__':
 
     for i in range(N):
         tmp = arr[:i] + arr[i + 1:]
-        print(tmp)
+
         left, right = 0, len(tmp) - 1
         while left < right:
             t = tmp[left] + tmp[right]
