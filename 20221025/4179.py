@@ -33,7 +33,7 @@ while q :
             if time > -1 and graph[nx][ny] == ".":
                 graph[nx][ny] = "_"
                 q.append([time + 1 , nx,ny])
-        elif time == -1 and graph[nx][ny] != "F":
-            graph[nx][ny] = "F"
-            q.append([-1,nx,ny])
+            elif time == -1 and graph[nx][ny] != "F":
+                graph[nx][ny] = "F"
+                q.append([-1,nx,ny])
 print(ans)
