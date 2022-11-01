@@ -13,7 +13,4 @@ for i in range(1, n+1):
         dp[i][j] = max(dp[i-1][j-ci] + mi, dp[i][j])
         if dp[i][j] >= m:
             ans = min(ans, j)
-    for ddd in dp:
-        print(ddd)
-    print()
 print(ans)
