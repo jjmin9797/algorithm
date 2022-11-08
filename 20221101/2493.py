@@ -13,6 +13,4 @@ for i in range(len(board)):
             result[i] = stack[-1][0] + 1
             break
     stack.append((i,board[i]))
-    print(stack)
-    print(result)
-    print()
+print(*result)
