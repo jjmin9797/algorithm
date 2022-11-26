@@ -1,6 +1,5 @@
 sugar = int(input())
 dp = [0,-1,-1,1,-1,1,2]
-
 if sugar >= 6 :
     for i in range(7,5001):
         bag3 = dp[i-3]

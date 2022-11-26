@@ -8,5 +8,9 @@ for _ in range(m):
     for party in parties :
         if party & knowList :
             knowList = knowList.union(party)
-
-print(knowList)
+cnt = 0
+for party in parties:
+    if party & knowList :
+        continue
+    cnt += 1
+print(cnt)
