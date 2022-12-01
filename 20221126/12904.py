@@ -10,7 +10,7 @@ while secondWard :
     elif secondWard[-1] == "B":
         secondWard.pop()
         secondWard.reverse()
-    elif len(secondWard) == len(firstWard) :
+    if len(secondWard) == len(firstWard) :
         if secondWard == firstWard :
             print(1)
             break
