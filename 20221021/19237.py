@@ -10,7 +10,7 @@ shark = [[0,0] for _ in range(m)]
 
 # 상어의 초기 방향 정해주기
 directions = list(map(int, input().split()))
-5
+
 # 상어의 방향별 우선순위 받아오기(위 아래 왼쪽 오른쪽)
 priorities = []
 for i in range(m):
