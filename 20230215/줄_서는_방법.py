@@ -48,5 +48,5 @@ def solution(n, k):
             start += routes
             end += routes
     return answer
-        
+
             
