@@ -15,7 +15,7 @@ village.sort(key=lambda x: x[0])
 
 
 now_people = 0
-total_people //= 2
+total_people /= 2
 for v, p in village:
     now_people += p
     if now_people >= total_people:
