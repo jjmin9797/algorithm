@@ -22,7 +22,7 @@ n = int(read())
 course = []
 for _ in range(n + 1):  # (0, 0) 에서 상점까지의 거리
     x, y = map(int, input().split())
-    course.append(getDistance(x, y))
+    course.append(get_distance(x, y))
 
 answer = 0
 
